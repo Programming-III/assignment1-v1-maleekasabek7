@@ -5,9 +5,8 @@
 
 //define mammal class here
 
-
-
-
+string mammal (string furcolor);
+   
 
 
 #endif
