@@ -8,15 +8,15 @@
 using namespace std;
 
 void display() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-        cout << "Hungry: " << (isHungry ? "Yes" : "No") << endl;
+        cout <<name << endl;
+        cout << age << endl;
+        cout << (isHungry ? "Yes" : "No") << endl;
     }
 
 
     void feed() {
         if (isHungry) {
-            cout << name << " was hungry. Feeding..." << endl;
+            cout << name << " was hungry " << endl;
             isHungry = false;
         } else {
             cout << name << " is not hungry." << endl;
