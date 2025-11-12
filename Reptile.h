@@ -6,6 +6,7 @@
 //define reptile class here
 
 
+  bool reptile(bool isvenomous);
 
 
 
