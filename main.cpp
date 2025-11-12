@@ -7,53 +7,76 @@
 #include <iostream>
 using namespace std;
 
- class Animal(string n,int a,bool h){
-    name=n;
-     age=a;
-     isHugry=h;
-}
-void Animal :: display(){
-      cout<< name<<endl;
-        cout<<age<<endl;
-          cout<<isHugry<<endl;
+void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Hungry: " << (isHungry ? "Yes" : "No") << endl;
+    }
+
+
+    void feed() {
+        if (isHungry) {
+            cout << name << " was hungry. Feeding..." << endl;
+            isHungry = false;
+        } else {
+            cout << name << " is not hungry." << endl;
+        }
+  string mammal(string furColor) {
+        return furColor;
+    }
+
+    float bird(float wingspan) {
+        return wingspan;
+    }
+
+    bool reptile(bool isVenomous) {
+        return isVenomous;
+    }
 };
-void Animal :: feed(){
-   
-    if (isHugry=true){
-        cout<<"hungry";}
-        else{
-            cout<<"not hungry";
-            
+ void addAnimal(Animal* a) {
+        if (currentCount < capacity) {
+            animals[currentCount++] = a;
+            cout << "Animal added to enclosure." << endl;
+        } else {
+            cout << "Enclosure is full!" << endl;
         }
     }
-  string Animal:: mammal (string FC){
-      string furcolor=FC;
-      return FC;
-      
-  }
-   float Animal:: bird(float WS){
-        float wingspan=WS;
-        return WS;
-   }
-  bool reptile(bool v){
-      bool isvenomous=v;
-      return v;
-  }
-void Enclosure:: addAnimal(Animal *a){
-Enclosure *animal =new Enclosure();
-}
-void Enclosure:: displayAnimal(int a){
-cout<<a  ;
-}
 
+    void displayAnimals() {
+        for (int i = 0; i < currentCount; i++) {
+            animals[i]->display();
+            cout <<" "<< endl;
+        }
+    }
+};
 
 // ============== MAIN FUNCTION ==============
-int main() {
     
-    Enclosure s;
-s.addAnimal(66);
-Animal lion("lion" ,5,"Hungry");
-Animal parrot("parrot" ,2,"not hungry")
+int main(){
+
+    Animal lion("Lion", 5, true);
+    Animal parrot("Parrot", 2, false);
+    Animal snake("snake",yes,true);
+
+    lion.display();
+    lion.feed();
+    parrot.display();
+
+ 
+    Enclosure zoo;
+    zoo.addAnimal(&lion);
+    zoo.addAnimal(&parrot);
+    zoo.addAnimal(&snake);
+    zoo.displayAnimals();
+
+  
+    Visitor v1("Alice", 2);
+    v1.displayInfo();
+
+   
+    cout << lion.mammal("Golden") << endl;
+    cout << "Parrot wingspan: " << parrot.bird(1.2) << " meters" << endl;
+    cout << "Is reptile venomous? " << (lion.reptile(false) ? "Yes" : "No") << endl;
 
     return 0;
 }
