@@ -14,9 +14,7 @@ class Animal{
     public:
     void display();
     void feed();
-string mammal (string furcolor);
-   float bird(float wingspan);
-  bool reptile(bool isvenomous);
+
    
 }
 
